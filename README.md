@@ -19,7 +19,7 @@
 ### ▎Who I Am
 
 - 🔐 Penultimate-year BSc Computing Science student, aiming for **SOC analyst / security engineering** roles
-- 🛠️ Building **LDR Platform** — a self-built mini SOC covering ingestion, detection, investigation and response
+- 🛠️ Shipped LDR Platform v1.1 (self-built mini SOC) — now building Verafield, an EUDR compliance evidence platform
 - 📡 Completed TryHackMe's Pre Security, Cyber Security 101 and SOC Level 1 — now on the **Security Engineer** path
 - 🎯 Targeting SOC Analyst / Security Engineer internships at finance & tech, Summer 2027
 - 💬 Always happy to chat cybersecurity or software engineering
@@ -41,7 +41,7 @@
 
 ### ▎Project Case Studies
 
-**🛡️ LDR Platform — Mini SOC Platform**
+**LDR Platform — Mini SOC Platform**
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white) ![MITRE ATT&CK](https://img.shields.io/badge/MITRE_ATT%26CK-C0102D?style=flat-square)
 
 **The Challenge:** Turn raw Flask/Nginx logs into something an analyst can actually act on — not a log viewer, but real detection, investigation, and response with a defensible audit trail.
@@ -64,7 +64,7 @@ Agent → Ingest API → Normaliser → Event Store (Postgres)
 
 ---
 
-**🔒 Flask-LearnPython — Security-Focused Learning Platform**
+**Flask-LearnPython — Security-Focused Learning Platform**
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) ![CSRF](https://img.shields.io/badge/CSRF_protection-212C42?style=flat-square) ![Rate Limiting](https://img.shields.io/badge/Rate_limiting-212C42?style=flat-square) ![Docker Sandbox](https://img.shields.io/badge/Docker_sandbox-2496ED?style=flat-square&logo=docker&logoColor=white)
 
 **The Challenge:** An interactive Python-learning platform needs to let users run their own code — a textbook remote-code-execution risk if done carelessly.
@@ -85,7 +85,7 @@ Docker container   (--network=none --memory=128m --cpus=0.5 --pids-limit=32)
 
 ---
 
-**📡 Socket-Transfer-App — Custom TCP File-Transfer Protocol**
+**Socket-Transfer-App — Custom TCP File-Transfer Protocol**
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![Sockets](https://img.shields.io/badge/Raw_sockets-212C42?style=flat-square) ![Protocol Design](https://img.shields.io/badge/Protocol_design-212C42?style=flat-square)
 
 **The Challenge:** Understand how application-layer protocols actually work by building one from raw TCP sockets — standard library only, no framework doing the work underneath.
@@ -116,6 +116,7 @@ Server → handshake   (exactly "OK" or "ER")
  ├─ [✓] MITRE ATT&CK mapping + tamper-evident hash-chained audit log
  │
  ├─ [~] TryHackMe: Security Engineer path
+ ├─ [~] Verafield — EUDR compliance evidence platform
  ├─ [~] LeetCode — arrays, hashmaps, sliding window
  │
  ├─ [ ] TryHackMe: Pentesting path + Kali Linux
