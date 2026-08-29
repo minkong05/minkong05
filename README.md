@@ -64,6 +64,36 @@ Agent → Ingest API → Normaliser → Event Store (Postgres)
 
 ---
 
+**Verafield — EUDR Regulatory Compliance Platform** *(in progress)*
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white) ![Pydantic](https://img.shields.io/badge/Pydantic-E92063?style=flat-square&logo=pydantic&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white) ![Alembic](https://img.shields.io/badge/Alembic-2C2D72?style=flat-square) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white)
+
+**The Challenge:** Independent oil-palm smallholders need to prove EU Deforestation Regulation compliance — resolving what documents they hold against a versioned state-tenure rulebook, cross-checking field signals for anomalies, and assembling it all into an evidence pack a mill can send to its EU buyer.
+
+**The Solution:** A FastAPI backend across ten routers with schema-level multi-tenant isolation — every child row uses a composite foreign key on `(parent_id, mill_id)`, so one tenant's records can't be linked to another's even if application code forgets to filter. A versioned rules engine (seeded through Alembic migrations) resolves state + land type to exact required documents, a verification engine routes inconsistent field signals to human review, and an evidence-pack generator assembles cleared records into a regulator-mapped output only once every flag on the batch clears.
+
+```
+Mill Dashboard (teammate)     Field Collector (teammate)
+              ↘                     ↙
+             backend/routes  —  10 routers (mine)
+                          ↓
+                   Rules Engine
+     state + land type → required docs (versioned rulebook)
+                          ↓
+                Verification Engine
+      deforestation test + Five-Point Field Check
+                          ↓
+        inconsistent ──→ needs_review queue (human)
+                          ↓ cleared
+              Evidence Pack Generator
+        Annex II JSON + GeoJSON  →  mill  →  EU buyer
+```
+
+*Team project, in progress — pre-MVP, backend feature-complete through roadmap feature 9. This card covers only the FastAPI backend and shared `packages/shared_types` contract, my own work. The React/TypeScript mill dashboard and the offline field-collector app are built by a teammate; both integrate against my API without touching the service or database layers directly.*
+
+[Verafield Repo →](https://github.com/minkong05/Verafield)
+
+---
+
 **Flask-LearnPython — Security-Focused Learning Platform**
 ![Flask](https://img.shields.io/badge/Flask-000000?style=flat-square&logo=flask&logoColor=white) ![CSRF](https://img.shields.io/badge/CSRF_protection-212C42?style=flat-square) ![Rate Limiting](https://img.shields.io/badge/Rate_limiting-212C42?style=flat-square) ![Docker Sandbox](https://img.shields.io/badge/Docker_sandbox-2496ED?style=flat-square&logo=docker&logoColor=white)
 
