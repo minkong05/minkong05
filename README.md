@@ -24,7 +24,7 @@
 
 - 🔐 Penultimate-year (Year 3) BSc Computing Science student, aiming for **SOC analyst / security engineering** roles
 - 🛠️ Shipped LDR Platform v1.0.0 (self-built mini SOC, 16 weeks) — now building Verafield, an EUDR compliance evidence platform
-- 📡 Completed **four TryHackMe paths** — Pre Security, Cyber Security 101, SOC Level 1 and Security Engineer — now working through Defending AWS
+- 📡 Completed **five TryHackMe paths** — Pre Security, Cyber Security 101, SOC Level 1, Security Engineer and Defending AWS
 - 🎯 Targeting SOC Analyst / Security Engineer internships at finance & tech, Summer 2027
 - 🚩 CTFs at Glasgow — GUHackSoc (with Morgan Stanley engineers) and an Elastic SIEM investigation workshop
 - 🗣️ Mandarin (native) · English (fluent) · Cantonese (fluent) · Malay (conversational)
@@ -149,12 +149,11 @@ Docker container   (--network=none --memory=128m --cpus=0.5 --pids-limit=32)
 ```
 2024 ─────────────────────────────────────────────────────────────────── 2028
  │
- ├─ [✓] TryHackMe: 4 paths — Pre Security → CS 101 → SOC L1 → Security Engineer
+ ├─ [✓] TryHackMe: 5 paths — Pre Security → CS 101 → SOC L1 → Security Engineer → Defending AWS
  ├─ [✓] LDR Platform v1.0.0 — detection, dashboard, response, audit trail
  ├─ [✓] MITRE ATT&CK mapping + tamper-evident hash-chained audit log
  ├─ [✓] Verafield backend — 11 MVP features, 13 routers, auth + tenant isolation
  │
- ├─ [~] TryHackMe: Defending AWS
  ├─ [~] Verafield — team MVP (backend complete, teammate's apps in progress)
  ├─ [~] Year 3 — Team Project (30 credits) + Cyber Security Fundamentals
  ├─ [~] LeetCode — arrays, hashmaps, sliding window
